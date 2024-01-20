@@ -1,0 +1,26 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "reviewers": ["laminne"],
+  "ignoreTests": false,
+  "automerge": true,
+  "major": {
+    "automerge": false
+  },
+  "platformAutomerge": true,
+  "prConcurrentLimit": 10,
+  "dependencyDashboard": true,
+  "semanticCommits": "enabled",
+  "enabledManagers": ["npm"],
+  "minimumReleaseAge": "3 days",
+  "packageRules": [
+    {
+      "matchDatasources": ["npm"],
+      "labels": ["Dependency"],
+      "patch": {
+        "automerge": true
+      }
+    }
+  ],
+  "extends": [":timezone(Asia/Tokyo)"],
+  "schedule": ["on the first day of the week"]
+}
